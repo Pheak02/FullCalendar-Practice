@@ -16,6 +16,12 @@ app.get('/HELLO', (req, res) => {
     res.send('Hello, world!');
   });
 
+// ADD DATE OBJECT
+app.get('/', (req, res) => {
+    const currentDate = new Date();
+    res.send(`The current date is: ${currentDate}`);
+  });
+
 // ===WITH ENV====
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
