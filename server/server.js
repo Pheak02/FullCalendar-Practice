@@ -11,6 +11,11 @@ const app=express()
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+//TEST BASIC ROUTE
+app.get('/HELLO', (req, res) => {
+    res.send('Hello, world!');
+  });
+
 // ===WITH ENV====
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
